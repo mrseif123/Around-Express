@@ -4,11 +4,10 @@ const path = require('path');
 
 router.get('/', (req, res) => {
   const dataPath = path.join(__dirname, '../data/users.json');
-  fs.readFile(dataPath, {
-    encoding: 'utf8',
-  }, (err, data) => {
+  fs.readFile(dataPath, { encoding: 'utf8' }, (err, data) => {
     if (err) {
       console.log(err);
+      res.status(500).send({ message: 'Internal Server Error' });
       return;
     }
     const users = JSON.parse(data);
@@ -17,22 +16,17 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  const dataPath = path.join(__dirname, '../data/users.json');
-  fs.readFile(dataPath, {
-    encoding: 'utf8',
-  }, (err, data) => {
+  const dataPath = path.join(__dirname, '../data/users.json'); fs.readFile(dataPath, { encoding: 'utf8' }, (err, data) => {
     if (err) {
       console.log(err);
+      res.status(500).send({ message: 'Internal Server Error' });
       return;
     }
     const users = JSON.parse(data);
     const user = users.filter((item) => item._id === req.params.id);
 
     if (user.length === 0) {
-      res.status(404);
-      res.send({
-        message: 'User ID not found',
-      });
+      res.status(404).send({ message: 'User ID not found' });
     } else {
       res.send(user[0]);
     }
