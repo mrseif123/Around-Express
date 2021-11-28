@@ -1,11 +1,12 @@
-# Around the U.S. Back End  
-# [Projects 12: Around Express](??)
+# [Projects 12: Around Express -Around the U.S. Back End-](??)
 
-#### This project focused on the following server Back-End technologies:
+## This project focused on the following server Back-End technologies:
+
 * Express.js
 * Node.js
   
-#### In addition to those from previous projects:
+## In addition to those from previous projects:
+
 * React syntax.
 * JSX.
 * Using React Hooks.
@@ -37,6 +38,3 @@ All other directories are optional and may be created by the developer if necess
 `npm run start` — to launch the server.  
   
 `npm run dev` — to launch the server with the hot reload feature.  
-
-
-
