@@ -24,14 +24,6 @@
 * Figma design.
 
 [A direct link (GitHub Pages)](??)
-
-## Directories  
-  
-`/data` — JSON files to temporarily emulate database integration.  
-  
-`/routes` — routing files.  
-  
-All other directories are optional and may be created by the developer if necessary.   
   
 ## Running the Project  
   
